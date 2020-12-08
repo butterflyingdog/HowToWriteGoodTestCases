@@ -9,8 +9,8 @@
 
 这个项目记录了使用
 
-`Robot Framework<http://robotframework.org>`_编写好的测试用例的一般指南。
+`Robot Framework<http://robotframework.org>`_ 编写好的测试用例的一般指南。
 
 
 
-请参考`<ToWriteGoodTestCases.rst>`_文件。
+请参考`<ToWriteGoodTestCases.rst>`_ 文件。

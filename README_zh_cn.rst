@@ -11,4 +11,4 @@
 
 
 
-请参考 `<ToWriteGoodTestCases.rst>`_ 文件。
+请参考 `<ToWriteGoodTestCases_zh_cn.rst>`_ 文件。

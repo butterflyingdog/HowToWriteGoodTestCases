@@ -89,24 +89,6 @@ __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintai
   Login With Invalid Username And Invalid Password Should Fail
 
 
-Keyword names
--------------
-
-- Keyword names should be descriptive and clear.
-
-- Should explain what the keyword does, not how it does its task(s).
-
-- Very different abstraction levels (e.g. `Input Text` or `Administrator
-  logs into system`).
-
-- There is no clear guideline on whether a keyword should be fully title cased or have
-  only the first letter be capitalized.
-
-  - Title casing is often used when the keyword name is short (e.g. `Input Text`).
-  - Capitalizing just the first letter typically works better with keywords
-    that are like sentences (e.g. `Administrator logs into system`). These
-    type of keywords are often higher level.
-	
 关键字命名
 -------------
 
@@ -159,6 +141,27 @@ Naming setup and teardown
 
 - Everyone working with these tests should always understand what a setup or
   teardown does.
+
+  
+案例初始化和清理的命名
+-------------------------
+
+- 尝试使用描述所做操作的名称。
+
+  - 可能使用现有关键字。
+
+- 如果设置或拆卸包含不相关的步骤，则可以使用更抽象的名称。
+
+  - 以名称列出步骤是重复的，而且是维护问题
+（例如“登录系统、添加用户、激活警报和检查余额”）。
+
+  - 通常最好使用通用的东西（例如“初始化系统”）。
+
+- 如果实现较低级别步骤的关键字已经存在，则内置关键字“Run Keywords”可以很好地工作。
+
+  - 不可重用，因此最好在只需要一次安装或拆卸场景时使用。
+
+  - 使用这些测试的每个人都应该了解设置或拆卸的作用。  
 
 Good:
 .. code:: robotframework

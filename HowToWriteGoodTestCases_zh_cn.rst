@@ -266,7 +266,7 @@ Bad (especially if suite is named well like `account_withdrawal.robot`):
 
 - 关键字文档主要用于记录参数和返回值。
 
-- 关键字文档可以在由 Libdoc__ 生成的资源文件和诸如 RIDE__ 这样的编辑器工具中显示。 
+- 关键字文档可以在由 Libdoc 生成的资源文件和诸如 RIDE__ 这样的编辑器工具中显示。 
 
 __ http://robotframework.org/robotframework/#built-in-tools
 __ https://github.com/robotframework/RIDE

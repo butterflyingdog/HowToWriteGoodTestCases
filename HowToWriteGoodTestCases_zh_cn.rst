@@ -76,7 +76,7 @@ __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintai
   Invalid Password
   Invalid Username And Password
 
-These names would be somewhat long:
+下边这些测试案例的名字就有些长了:
 
 .. code:: robotframework
 
@@ -106,15 +106,30 @@ Keyword names
   - Capitalizing just the first letter typically works better with keywords
     that are like sentences (e.g. `Administrator logs into system`). These
     type of keywords are often higher level.
+	
+关键字命名
+-------------
 
-Good:
+- 关键字名称应该是描述性的和清晰的。
+
+- 关键字应该解释业务目的，而不是描述如何完成任务。
+
+- 非常不同的抽象级别（例如“输入文本”或“管理员登录系统`）。
+
+- 对于关键字是否应该是全标题大小写还是具有只有第一个字母大写。
+
+	- 当关键字名称很短（例如“Input Text”）时，通常使用标题大小写。
+
+	- 只将第一个字母大写通常对类似于句子的关键字更有效（例如“管理员登录系统”）。这些关键字的类型通常是更高级别的。
+
+好的例子:
 
 .. code:: robotframework
 
   *** Keywords ***
   Login With Valid Credentials
 
-Bad:
+不好的例子:
 
 .. code:: robotframework
 

@@ -1,4 +1,4 @@
-如何编写好的测试用例
+﻿如何编写好的测试用例
 
 
 ===========================
@@ -11,4 +11,4 @@
 
 
 
-请参考 `<ToWriteGoodTestCases_zh_cn.rst>`_ 文件。
+请参考 `<HowToWriteGoodTestCases_zh_cn.rst>`_ 文件。

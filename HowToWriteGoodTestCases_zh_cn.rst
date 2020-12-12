@@ -166,49 +166,19 @@ Bad:
 __ http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Run%20Keywords
 
 
-Documentation
-=============
-
-Test suite documentation
-------------------------
-
-- Often a good idea to add overall documentation to test case files.
-
-- Should contain background information, why tests are created, notes about
-  execution environment, etc.
-
-- Do not just repeat test suite name.
-
-  - Better to have no documentation if it is not really needed.
-
-- Do not include too much details about test cases.
-
-  - Tests should be clear enough to understand alone.
-  - Duplicate information is waste and maintenance problem.
-
-- Documentation can contain links to more information.
-
-- Consider using test suite metadata if you need to document information
-  represented as name-value pairs (e.g. `Version: 1.0` or `OS: Linux`).
-
-- Documentation and metadata of the top level suite can be set from the
-  command line using `--doc` and `--metadata` options, respectively.
-  
-  
+ 
+ 
 文档
-
 =============
 
 测试集合文档
 ------------------------
 
-
-
 - 通常将整个文档添加到测试用例文件中是一个好主意。
 
 - 应该包含背景信息，为什么要创建测试，关于执行环境等。
 
-- 不要重复测试套件名称。
+- 不要重复测试集合的名称。
 
   - 如果不是真的需要，最好没有文档。
 
@@ -242,22 +212,22 @@ Bad (especially if suite is named well like `account_withdrawal.robot`):
   Documentation    Tests Account Withdrawal.
 
 
-Test case documentation
+ 
+
+测试用例文档
 -----------------------
 
-- Test normally does not need documentation.
+- 测试通常不需要文档。
 
-  - Name and possible documentation of the parent suite and test's own name
-    should give enough background information.
-  - Test case structure should be clear enough without documentation or other
-    comments.
+	- 案例所在测试集合的名称和可能的文档以及测试案例本身的名称应该提供足够的背景信息。
 
-- Tags are generally more flexible and provide more functionality (statistics,
-  include/exclude, etc.) than documentation.
+	- 测试用例结构应该足够清晰，尽量没有文档或其他注释。
 
-- Sometimes test documentation is useful. No need to be afraid to use it.
+- 推荐使用标签(Tag)，因为标签通常比文档更灵活，提供更多的功能（统计信息、包含/排除等）。
 
-Good:
+- 有时测试文档是有用的，确实有必要时可以使用它。
+
+好的示例:
 
 .. code:: robotframework
 
@@ -270,7 +240,7 @@ Good:
       Submit Credentials
       Welcome Page Should Be Open
 
-Bad:
+不好的示例:
 
 .. code:: robotframework
 
@@ -286,17 +256,17 @@ Bad:
       Title Should Be    Welcome Page
 
 
-User keyword documentation
+	
+用户自定义关键字中的文档
 --------------------------
 
-- Not needed if keyword is relatively simple.
+- 如果关键字相对简单，则不需要。
 
-  - Good keyword, argument names and clear structure should be enough.
+  - 好的关键字，包括参数名和清晰的结构就足够了。
 
-- Important usage is documenting arguments and return values.
+- 关键字文档主要用于记录参数和返回值。
 
-- Shown in resource file documentation generated with Libdoc__ and editors
-  such as RIDE__ can show it in keyword completion and elsewhere.
+- 关键字文档可以在由 Libdoc__生成的资源文件和诸如RIDE这样的编辑器工具中显示。 
 
 __ http://robotframework.org/robotframework/#built-in-tools
 __ https://github.com/robotframework/RIDE

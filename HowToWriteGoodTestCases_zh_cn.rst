@@ -12,7 +12,7 @@
 简介
 ============
 
-- 这些是使用Robot框架编写好的测试用例的高级指南。
+- 本文介绍了如何使用Robot框架编写好的测试用例的高级指南。
 
 
 
@@ -32,7 +32,7 @@
 
 
 
-- 关于这个主题的更多信息，您可能想看看这些伟大的资源：
+- 关于这个主题的更多信息，您可能想看看这些重要的资源：
 
   - `Robot Framework Dos and Don'ts`__ slides that are based on this how-to.
   - `Writing Maintainable Automated Acceptance Tests`__ article by Dale Emery.
@@ -44,25 +44,45 @@ __ http://cwd.dhemery.com/2009/11/wmaat
 __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintainable-acceptance-test-suite
 
 
-Naming
+命名规则
 ======
 
-Test suite names
+测试集合命名
 ----------------
 
-- Suite names should be as descriptive as possible.
+-测试集合名称应尽可能具有描述性。
 
-- Names are created automatically from file or directory names:
 
-  - Extensions are stripped.
-  - Underscores are converted to spaces.
-  - If name is all lower case, words are capitalized.
 
-- Names can be relatively long, but overly long names are not convenient for
-  the file system.
 
-- The name of the top level suite can be overridden from the command line
-  using the `--name` option if needed.
+-可以从文件名或目录名自动创建测试集合名称，注意事项如下：
+  
+
+
+
+-不要包含文件扩展名。
+  
+
+-将下划线转换为空格。
+
+
+  -如果名称都是小写，则单词将大写。
+
+
+
+
+
+-名称可以相对较长，但过长的名称不方便
+
+文件系统。
+
+
+
+
+
+-可以从命令行重写顶级测试集合的名称，必要时
+
+，请使用“--name”选项。
 
 Examples:
 

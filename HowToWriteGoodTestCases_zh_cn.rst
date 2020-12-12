@@ -291,6 +291,32 @@ Test suite structure
   - Consider verifying the status of the previous test using the built-in
     `${PREV TEST STATUS}` variable.
 
+测试套件结构
+====================
+
+- 套件中的测试应该相互关联。
+
+  - 推荐使用公共的初始化和/或清理步骤。
+
+- 不应该在一个文件中有太多的测试（最多10个），除非它们是 ·数据驱动测试`__。
+
+
+
+-测试应该是独立的。使用setup/teardown初始化。
+
+
+
+-有时测试之间的依赖性是无法避免的。
+
+
+
+-例如，单独初始化所有测试可能需要太多时间。
+
+-从来没有长链的依赖性测试。
+
+-考虑使用内置的
+
+`${PREV TEST STATUS}`变量。
 
 Test case structure
 ===================
@@ -374,7 +400,7 @@ Example using higher level "gherkin" style:
 See the `web demo project <https://github.com/robotframework/WebDemo/>`_
 for executable versions of the above examples.
 
-Data-driven tests
+数据驱动测试
 -----------------
 
 - One high-level keyword per test.

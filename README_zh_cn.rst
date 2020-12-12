@@ -1,4 +1,4 @@
-﻿如何编写好的测试用例
+��α�д�õĲ�������
 
 
 ===========================
@@ -7,10 +7,10 @@
 
 
 
-这个项目记录了使用 
+�����Ŀ��¼��ʹ��
 
-`Robot Framework<http://robotframework.org>`_ 编写好的测试用例的一般指南。
+`Robot Framework<http://robotframework.org>`_ ��д�õĲ���������һ��ָ�ϡ�
 
 
 
-请参考 `<HowToWriteGoodTestCases.rst>`_ 文件。
+��ο�`<ToWriteGoodTestCases.rst>`_ �ļ���

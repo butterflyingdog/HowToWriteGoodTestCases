@@ -92,16 +92,29 @@ __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintai
 测试案例命名
 ---------------
 
-- Test names should be descriptive like the suite names.
+- 测试案例名称应该像测试集合名称那样具有描述性。
 
-- If a suite contains many similar tests and is well named,
-  test names can be shorter.
 
-- Name is exactly the same as you specified in the test case file without any
-  conversion.
 
-For example, if we have tests related to invalid login in a file
-`invalid_login.robot`, these would be OK test case names:
+
+- 如果一个测试集合包含许多类似的测试案例并且命名良好，
+
+测试案例名称可以更短。
+
+
+
+
+- 测试案例名称与您在测试案例文件中指定的名称完全相同，无线任何名称
+
+转换。
+
+
+
+
+
+例如，如果我们在一个文件中有与无效登录相关的测试
+
+`invalid_login.robot`，下班这些是正常的测试用例名称：
 
 .. code:: robotframework
 

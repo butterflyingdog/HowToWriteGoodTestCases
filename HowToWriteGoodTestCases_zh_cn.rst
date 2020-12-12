@@ -119,7 +119,7 @@ __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintai
   Input Valid Username And Valid Password And Click Login Button
 
   
-案例初始化和清理阶段的命名
+案例初始化（setup）和清理（tearDown）阶段的命名
 -------------------------
 
 - 描述行为的目的。
@@ -266,30 +266,11 @@ Bad (especially if suite is named well like `account_withdrawal.robot`):
 
 - 关键字文档主要用于记录参数和返回值。
 
-- 关键字文档可以在由 Libdoc__生成的资源文件和诸如RIDE这样的编辑器工具中显示。 
+- 关键字文档可以在由 Libdoc__ 生成的资源文件和诸如 RIDE__ 这样的编辑器工具中显示。 
 
 __ http://robotframework.org/robotframework/#built-in-tools
 __ https://github.com/robotframework/RIDE
 
-
-Test suite structure
-====================
-
-- Tests in a suite should be related to each other.
-
-  - Common setup and/or teardown is often a good indicator.
-
-- Should not have too many tests (max 10) in one file unless they are
-  `data-driven tests`_.
-
-- Tests should be independent. Initialization using setup/teardown.
-
-- Sometimes dependencies between tests cannot be avoided.
-
-  - For example, it can take too much time to initialize all tests separately.
-  - Never have long chains of dependent tests.
-  - Consider verifying the status of the previous test using the built-in
-    `${PREV TEST STATUS}` variable.
 
 测试套件结构
 ====================
@@ -298,25 +279,17 @@ Test suite structure
 
   - 推荐使用公共的初始化和/或清理步骤。
 
-- 不应该在一个文件中有太多的测试（最多10个），除非它们是 ·数据驱动测试`__。
+- 不应该在一个文件中有太多的测试（最多10个），除非它们是 `数据驱动测试`__。
 
+- 测试案例原则上应该是独立的。可以使用setup/teardown初始化。
 
+- 有时测试之间的依赖性是无法避免的。
 
--测试应该是独立的。使用setup/teardown初始化。
+  - 例如，单独初始化所有测试可能需要太多时间。
 
+  - 从来没有长链的依赖性测试。
 
-
--有时测试之间的依赖性是无法避免的。
-
-
-
--例如，单独初始化所有测试可能需要太多时间。
-
--从来没有长链的依赖性测试。
-
--考虑使用内置的
-
-`${PREV TEST STATUS}`变量。
+  - 考虑使用内置的`${PREV TEST STATUS}`变量来验证前一个测试案例的执行结果状态。
 
 Test case structure
 ===================

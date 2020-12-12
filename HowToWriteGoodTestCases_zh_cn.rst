@@ -84,13 +84,12 @@ __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintai
 
 ，请使用“--name”选项。
 
-Examples:
+示例:
 
 - `login_tests.robot` -> `Login Tests`
 - `IP_v4_and_v6` -> `IP v4 and v6`
 
-
-Test case names
+测试案例命名
 ---------------
 
 - Test names should be descriptive like the suite names.

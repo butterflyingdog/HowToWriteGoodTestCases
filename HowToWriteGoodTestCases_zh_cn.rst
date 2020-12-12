@@ -50,12 +50,12 @@ __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintai
 测试集合命名
 ----------------
 
--测试集合名称应尽可能具有描述性。
+- 测试集合名称应尽可能具有描述性。
 
 
 
 
--可以从文件名或目录名自动创建测试集合名称，注意事项如下：
+- 可以从文件名或目录名自动创建测试集合名称，注意事项如下：
   
 
 
@@ -72,7 +72,7 @@ __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintai
 
 
 
--名称可以相对较长，但过长的名称不方便
+- 名称可以相对较长，但过长的名称不方便
 
 文件系统。
 
@@ -80,7 +80,7 @@ __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintai
 
 
 
--可以从命令行重写顶级测试集合的名称，必要时
+- 可以从命令行重写顶级测试集合的名称，必要时
 
 ，请使用“--name”选项。
 

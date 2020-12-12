@@ -60,13 +60,13 @@ __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintai
 
 
 
--不要包含文件扩展名。
+- 不要包含文件扩展名。
   
 
--将下划线转换为空格。
+- 将下划线转换为空格。
 
 
-  -如果名称都是小写，则单词将大写。
+  - 如果名称都是小写，则单词将大写。
 
 
 

@@ -118,49 +118,26 @@ __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintai
   *** Keywords ***
   Input Valid Username And Valid Password And Click Login Button
 
-
-Naming setup and teardown
--------------------------
-
-- Try to use name that describes what is done.
-
-  - Possibly use an existing keyword.
-
-- More abstract names are acceptable if a setup or teardown contains unrelated steps.
-
-  - Listing steps in name is duplication and a maintenance problem
-    (e.g. `Login to system, add user, activate alarms and check balance`).
-
-  - Often better to use something generic (e.g. `Initialize system`).
-
-- BuiltIn keyword `Run Keywords`__ can work well if keywords implementing lower
-  level steps already exist.
-
-  - Not reusable so best used when the setup or teardown scenario is
-    needed only once.
-
-- Everyone working with these tests should always understand what a setup or
-  teardown does.
-
   
 案例初始化和清理阶段的命名
 -------------------------
 
-- 尝试使用描述所做操作的名称。
+- 描述行为的目的。
 
-  - 可能使用现有关键字。
+  - 可以使用现有关键字。
 
-- 如果设置或拆卸包含不相关的步骤，则可以使用更抽象的名称。
+- 如果初始化或清理阶段包含不相关的步骤，则可以使用更抽象的名称。
 
-  - 以名称列出步骤是重复的，而且是维护问题（例如“登录系统、添加用户、激活警报和检查余额”）。
+  - 不要在名称中列出步骤，这样是重复的，且不便于维护（例如“登录系统、添加用户、激活警报和检查余额”）。
 
-  - 通常最好使用通用的东西（例如“初始化系统”）。
+  - 通常最好使用通用的描述（例如“初始化系统”）。
 
 - 如果实现较低级别步骤的关键字已经存在，则使用内置关键字 `Run Keywords`__ 就可以很好地工作。
 
-  - 不可重用，因此最好在只需要一次安装或拆卸场景时使用。
+  - 不要重用，因此最好在只需要一次性初始化或清理的场景中使用。
 
-- 使用这些测试的每个人都应该了解初始化或清理阶段的作用。  
+- 使用这些测试案例的每个人都应该了解初始化或清理阶段的作用。  
+
 
 Good:
 .. code:: robotframework
@@ -216,6 +193,35 @@ Test suite documentation
 
 - Documentation and metadata of the top level suite can be set from the
   command line using `--doc` and `--metadata` options, respectively.
+  
+  
+文档
+
+=============
+
+测试集合文档
+------------------------
+
+
+
+- 通常将整个文档添加到测试用例文件中是一个好主意。
+
+- 应该包含背景信息，为什么要创建测试，关于执行环境等。
+
+- 不要重复测试套件名称。
+
+  - 如果不是真的需要，最好没有文档。
+
+- 不要包含太多关于测试用例的细节。
+
+  - 测试应该足够清楚，可以单独理解。
+  - 重复的信息既带来浪费，又不便维护。
+
+- 文档可以包含指向更多信息的链接。
+
+- 如果需要记录信息，请考虑使用元数据来表达，元数据可以表示为名称-值对（例如“Version:1.0”或“OS:Linux”）。
+
+- 最顶级的测试集合的文档和元数据可以从分别使用“-doc”和“--metadata”选项的命令行。  
 
 Good:
 

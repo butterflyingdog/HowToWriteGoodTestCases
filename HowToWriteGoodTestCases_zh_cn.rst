@@ -1,7 +1,7 @@
-ï»¿.. default-role:: code
+.. default-role:: code
 
 ==================================================
-å¦‚ä½•ä½¿ç”¨Robot Frameworkç¼–å†™å¥½çš„æµ‹è¯•æ¡ˆä¾‹
+ÈçºÎÊ¹ÓÃRobot Framework±àÐ´ºÃµÄ²âÊÔ°¸Àý
 ==================================================
 
 .. contents:: Table of contents:
@@ -9,18 +9,18 @@
    :depth: 2
 
 
-ç®€ä»‹
+¼ò½é
 ============
 
-- æœ¬æ–‡ä»‹ç»äº†å¦‚ä½•ä½¿ç”¨Robotæ¡†æž¶ç¼–å†™å¥½çš„æµ‹è¯•ç”¨ä¾‹çš„é«˜çº§æŒ‡å—ã€‚
+- ±¾ÎÄ½éÉÜÁËÈçºÎÊ¹ÓÃRobot¿ò¼Ü±àÐ´ºÃµÄ²âÊÔÓÃÀýµÄ¸ß¼¶Ö¸ÄÏ¡£
 
-  - å¦‚ä½•ä¸Žè¢«æµ‹ç³»ç»Ÿè¿›è¡Œå®žé™…äº¤äº’ä¸åœ¨æœ¬æ–‡çš„è®¨è®ºèŒƒå›´ä¹‹å†…ã€‚
+  - ÈçºÎÓë±»²âÏµÍ³½øÐÐÊµ¼Ê½»»¥²»ÔÚ±¾ÎÄµÄÌÖÂÛ·¶Î§Ö®ÄÚ¡£
 
-- æœ€é‡è¦çš„å‡†åˆ™æ˜¯è®©ç†Ÿæ‚‰è¯¥é¢†åŸŸçš„äººå°½å¯èƒ½å®¹æ˜“ç†è§£æµ‹è¯•ç”¨ä¾‹ã€‚
+- ×îÖØÒªµÄ×¼ÔòÊÇÈÃÊìÏ¤¸ÃÁìÓòµÄÈË¾¡¿ÉÄÜÈÝÒ×Àí½â²âÊÔÓÃÀý¡£
 
-  - è¿™é€šå¸¸ä¹Ÿä¾¿äºŽç»´æŠ¤ã€‚
+  - ÕâÍ¨³£Ò²±ãÓÚÎ¬»¤¡£
 
-- å…³äºŽè¿™ä¸ªä¸»é¢˜çš„æ›´å¤šä¿¡æ¯ï¼Œæ‚¨å¯èƒ½æƒ³çœ‹çœ‹è¿™äº›é‡è¦çš„èµ„æºï¼š
+- ¹ØÓÚÕâ¸öÖ÷ÌâµÄ¸ü¶àÐÅÏ¢£¬Äú¿ÉÄÜÏë¿´¿´ÕâÐ©ÖØÒªµÄ×ÊÔ´£º
 
   - `Robot Framework Dos and Don'ts`__ slides that are based on this how-to.
   - `Writing Maintainable Automated Acceptance Tests`__ article by Dale Emery.
@@ -32,44 +32,41 @@ __ http://cwd.dhemery.com/2009/11/wmaat
 __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintainable-acceptance-test-suite
 
 
-å‘½åè§„åˆ™
+ÃüÃû¹æÔò
 ======
 
-æµ‹è¯•é›†åˆå‘½å
+²âÊÔ¼¯ºÏÃüÃû
 ----------------
 
-- æµ‹è¯•é›†åˆåç§°åº”å°½å¯èƒ½å…·æœ‰æè¿°æ€§ã€‚
+- ²âÊÔ¼¯ºÏÃû³ÆÓ¦¾¡¿ÉÄÜ¾ßÓÐÃèÊöÐÔ¡£
 
-
-
-
-- å¯ä»¥ä»Žæ–‡ä»¶åæˆ–ç›®å½•åè‡ªåŠ¨åˆ›å»ºæµ‹è¯•é›†åˆåç§°ï¼Œæ³¨æ„äº‹é¡¹å¦‚ä¸‹ï¼š
+- ¿ÉÒÔ´ÓÎÄ¼þÃû»òÄ¿Â¼Ãû×Ô¶¯´´½¨²âÊÔ¼¯ºÏÃû³Æ£¬×¢ÒâÊÂÏîÈçÏÂ£º
   
-  - ä¸è¦åŒ…å«æ–‡ä»¶æ‰©å±•åã€‚
+  - ²»Òª°üº¬ÎÄ¼þÀ©Õ¹Ãû¡£
   
-  - å°†ä¸‹åˆ’çº¿è½¬æ¢ä¸ºç©ºæ ¼ã€‚
+  - ½«ÏÂ»®Ïß×ª»»Îª¿Õ¸ñ¡£
   
-  - å¦‚æžœåç§°éƒ½æ˜¯å°å†™ï¼Œåˆ™å•è¯å°†å¤§å†™ã€‚
+  - Èç¹ûÃû³Æ¶¼ÊÇÐ¡Ð´£¬Ôòµ¥´Ê½«´óÐ´¡£
 
-- åç§°å¯ä»¥ç›¸å¯¹è¾ƒé•¿ï¼Œä½†è¿‡é•¿çš„åç§°ä¸æ–¹ä¾¿æ–‡ä»¶ç³»ç»Ÿã€‚
+- Ãû³Æ¿ÉÒÔÏà¶Ô½Ï³¤£¬µ«¹ý³¤µÄÃû³Æ²»·½±ãÎÄ¼þÏµÍ³¡£
 
-- å¯ä»¥ä»Žå‘½ä»¤è¡Œé‡å†™é¡¶çº§æµ‹è¯•é›†åˆçš„åç§°ï¼Œå¿…è¦æ—¶ï¼Œè¯·ä½¿ç”¨â€œ--nameâ€é€‰é¡¹ã€‚
+- ¿ÉÒÔ´ÓÃüÁîÐÐÖØÐ´¶¥¼¶²âÊÔ¼¯ºÏµÄÃû³Æ£¬±ØÒªÊ±£¬ÇëÊ¹ÓÃ¡°--name¡±Ñ¡Ïî¡£
 
-ç¤ºä¾‹:
+Ê¾Àý:
 
 - `login_tests.robot` -> `Login Tests`
 - `IP_v4_and_v6` -> `IP v4 and v6`
 
-æµ‹è¯•æ¡ˆä¾‹å‘½å
+²âÊÔ°¸ÀýÃüÃû
 ---------------
 
-- æµ‹è¯•æ¡ˆä¾‹åç§°åº”è¯¥åƒæµ‹è¯•é›†åˆåç§°é‚£æ ·å…·æœ‰æè¿°æ€§ã€‚
+- ²âÊÔ°¸ÀýÃû³ÆÓ¦¸ÃÏñ²âÊÔ¼¯ºÏÃû³ÆÄÇÑù¾ßÓÐÃèÊöÐÔ¡£
 
-- å¦‚æžœä¸€ä¸ªæµ‹è¯•é›†åˆåŒ…å«è®¸å¤šç±»ä¼¼çš„æµ‹è¯•æ¡ˆä¾‹å¹¶ä¸”å‘½åè‰¯å¥½ï¼Œæµ‹è¯•æ¡ˆä¾‹åç§°å¯ä»¥æ›´çŸ­ã€‚
+- Èç¹ûÒ»¸ö²âÊÔ¼¯ºÏ°üº¬Ðí¶àÀàËÆµÄ²âÊÔ°¸Àý²¢ÇÒÃüÃûÁ¼ºÃ£¬²âÊÔ°¸ÀýÃû³Æ¿ÉÒÔ¸ü¶Ì¡£
 
-- æµ‹è¯•æ¡ˆä¾‹åç§°ä¸Žæ‚¨åœ¨æµ‹è¯•æ¡ˆä¾‹æ–‡ä»¶ä¸­æŒ‡å®šçš„åç§°å®Œå…¨ç›¸åŒï¼Œæ— çº¿ä»»ä½•åç§°è½¬æ¢ã€‚
+- ²âÊÔ°¸ÀýÃû³ÆÓëÄúÔÚ²âÊÔ°¸ÀýÎÄ¼þÖÐÖ¸¶¨µÄÃû³ÆÍêÈ«ÏàÍ¬£¬ÎÞÏßÈÎºÎÃû³Æ×ª»»¡£
 
-ä¾‹å¦‚ï¼Œå¦‚æžœæˆ‘ä»¬åœ¨ä¸€ä¸ªæ–‡ä»¶ä¸­æœ‰ä¸Žæ— æ•ˆç™»å½•ç›¸å…³çš„æµ‹è¯•`invalid_login.robot`ï¼Œä¸‹è¾¹è¿™äº›æ˜¯æ­£å¸¸çš„æµ‹è¯•ç”¨ä¾‹åç§°ï¼š
+ÀýÈç£¬Èç¹ûÎÒÃÇÔÚÒ»¸öÎÄ¼þÖÐÓÐÓëÎÞÐ§µÇÂ¼Ïà¹ØµÄ²âÊÔ`invalid_login.robot`£¬ÏÂ±ßÕâÐ©ÊÇÕý³£µÄ²âÊÔÓÃÀýÃû³Æ£º
 
 .. code:: robotframework
 

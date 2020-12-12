@@ -1,4 +1,4 @@
-.. default-role:: code
+﻿.. default-role:: code
 
 ==================================================
 如何使用Robot Framework编写好的测试案例
@@ -9,22 +9,30 @@
    :depth: 2
 
 
-Introduction
+简介
 ============
 
-- These are high-level guidelines for writing good test cases using Robot
-  Framework.
+- 这些是使用Robot框架编写好的测试用例的高级指南。
 
-  - How to actually interact with the system under test is out of
-    the scope of this document.
 
-- Most important guideline is keeping test cases as easy to understand as
-  possible for people familiar with the domain.
 
-  - This typically also eases maintenance.
 
-- For more information about this subject, you may want to take a look at
-  these great resources:
+ - 如何与被测系统进行实际交互不在本文的讨论范围之内。
+
+
+
+
+- 最重要的准则是让熟悉该领域的人尽可能容易理解测试用例。
+
+
+
+
+ - 这通常也便于维护。
+
+
+
+
+- 关于这个主题的更多信息，您可能想看看这些伟大的资源：
 
   - `Robot Framework Dos and Don'ts`__ slides that are based on this how-to.
   - `Writing Maintainable Automated Acceptance Tests`__ article by Dale Emery.

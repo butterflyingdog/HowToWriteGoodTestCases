@@ -279,7 +279,7 @@ __ https://github.com/robotframework/RIDE
 
   - 推荐使用公共的初始化和/或清理步骤。
 
-- 不应该在一个文件中有太多的测试（最多10个），除非它们是 `数据驱动测试`__。
+- 不应该在一个文件中有太多的测试（最多10个），除非它们是 `数据驱动测试`_。
 
 - 测试案例原则上应该是独立的。可以使用setup/teardown初始化。
 
@@ -308,7 +308,7 @@ Test case structure
 - Two kinds of test cases:
 
   - `Workflow tests`_
-  - `Data-driven tests`_
+  - `数据驱动测试`_
 
 
 Workflow tests

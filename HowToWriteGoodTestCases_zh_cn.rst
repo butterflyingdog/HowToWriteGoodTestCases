@@ -377,7 +377,7 @@ __ https://github.com/robotframework/RIDE
       When user "demo" logs in with password "mode"
       Then welcome page should be open
 
-这个范例 `web demo project <https://github.com/robotframework/WebDemo/>`_ 是上述样例的可执行版本.
+完整示例请参考 `web demo project <https://github.com/robotframework/WebDemo/>`_ .
 
 数据驱动测试
 -----------------

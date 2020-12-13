@@ -119,14 +119,14 @@ __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintai
   Input Valid Username And Valid Password And Click Login Button
 
   
-案例初始化（setup）和清理（tearDown）阶段的命名
+前置（setup）和后置（tearDown）处理阶段的命名
 -------------------------
 
 - 描述行为的目的。
 
   - 可以使用现有关键字。
 
-- 如果初始化或清理阶段包含不相关的步骤，则可以使用更抽象的名称。
+- 如果前置或后置处理阶段包含不相关的步骤，则可以使用更抽象的名称。
 
   - 不要在名称中列出步骤，这样是重复的，且不便于维护（例如“登录系统、添加用户、激活警报和检查余额”）。
 
@@ -134,9 +134,9 @@ __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintai
 
 - 如果实现较低级别步骤的关键字已经存在，则使用内置关键字 `Run Keywords`__ 就可以很好地工作。
 
-  - 不要重用，因此最好在只需要一次性初始化或清理的场景中使用。
+  - 不要重用，因此最好在只需要一次性前置处理或后置处理的场景中使用。
 
-- 使用这些测试案例的每个人都应该了解初始化或清理阶段的作用。  
+- 使用这些测试案例的每个人都应该了解前置或后置处理阶段的作用。  
 
 
 Good:
@@ -277,11 +277,11 @@ __ https://github.com/robotframework/RIDE
 
 - 套件中的测试应该相互关联。
 
-  - 推荐使用公共的初始化和/或清理步骤。
+  - 推荐使用公共的前置和/或后置处理步骤。
 
 - 不应该在一个文件中有太多的测试（最多10个），除非它们是 `数据驱动测试`_。
 
-- 测试案例原则上应该是独立的。可以使用setup/teardown初始化。
+- 除了公共的前置和后置处理，其他测试案例原则上应该是彼此独立的。
 
 - 有时测试之间的依赖性是无法避免的。
 
@@ -291,27 +291,28 @@ __ https://github.com/robotframework/RIDE
 
   - 考虑使用内置的`${PREV TEST STATUS}`变量来验证前一个测试案例的执行结果状态。
 
-Test case structure
+
+测试案例结构
 ===================
 
-- Test case should be easy to understand.
+- 测试案例应该易于理解。
 
-- One test case should be testing one thing.
+- 一个测试用例应该只测试一件事。
 
-  - *Things* can be small (part of a single feature) or large (end-to-end).
+  - 这件事可以是小的（单个功能的一部分）也可以是大的（端到端）。
 
-- Select suitable abstraction level.
+- 选择合适的抽象级别。
+  - 一致地使用抽象层次（单一层次的抽象原则）。
+  - 不要在测试用例级别包含不必要的细节。
 
-  - Use abstraction level consistently (single level of abstraction principle).
-  - Do not include unnecessary details on the test case level.
 
-- Two kinds of test cases:
+- 两种测试用例：
 
-  - `Workflow tests`_
+  - `工作流程测试`_
   - `数据驱动测试`_
 
 
-Workflow tests
+工作流程测试
 --------------
 
 - Generally have these phases:
@@ -348,7 +349,48 @@ Workflow tests
 
 - Max 10 steps, preferably less.
 
-Example using "normal" keyword-driven style:
+- 通常有以下几个阶段：
+
+  - 先决条件（可选，通常在前置处理中）
+  - 行动（对系统做些什么）
+  - 验证（验证结果，强制）
+  - 清理（可选，总是在后置处理中，以确保它被执行）
+
+
+- 关键词描述测试的作用。
+
+	- 使用清晰的关键字名称和合适的抽象级别。
+	- 应该包含足够的信息来手动运行。
+	- 永远不需要文档或注释来解释测试的作用。
+
+- 不同的测试可以有不同的抽象级别。
+
+	- 更详细的功能测试。
+
+	- 端到端测试可以是非常高的级别。
+
+	- 一个测试应该只使用一个抽象级别
+
+
+- 不同风格：
+
+	- 对较低层次的细节和集成测试进行更多的技术测试。
+
+	- “可执行规范”作为要求。
+
+	- 使用领域语言。
+
+	- 每个人（包括客户和/或产品负责人）都应该理解。
+
+
+- 测试用例级别没有复杂的逻辑。
+
+	- 没有for循环或if/else结构。
+	- 小心使用变量赋值
+	- 测试案例不应想脚本那样描述执行细节
+
+
+关键字驱动的测试样例： 
 
 .. code:: robotframework
 
@@ -360,7 +402,7 @@ Example using "normal" keyword-driven style:
       Submit Credentials
       Welcome Page Should Be Open
 
-Example using higher level "gherkin" style:
+行为驱动测试的样例
 
 .. code:: robotframework
 
@@ -370,8 +412,7 @@ Example using higher level "gherkin" style:
       When user "demo" logs in with password "mode"
       Then welcome page should be open
 
-See the `web demo project <https://github.com/robotframework/WebDemo/>`_
-for executable versions of the above examples.
+这个范例 `web demo project <https://github.com/robotframework/WebDemo/>`_ 是上述样例的可执行版本.
 
 数据驱动测试
 -----------------

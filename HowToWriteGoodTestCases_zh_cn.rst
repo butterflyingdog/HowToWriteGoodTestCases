@@ -315,40 +315,6 @@ __ https://github.com/robotframework/RIDE
 工作流程测试
 --------------
 
-- Generally have these phases:
-
-  - Precondition (optional, often in setup)
-  - Action (do something to the system)
-  - Verification (validate results, mandatory)
-  - Cleanup (optional, always in teardown to make sure it is executed)
-
-- Keywords describe what a test does.
-
-  - Use clear keyword names and suitable abstraction level.
-  - Should contain enough information to run manually.
-  - Should never need documentation or commenting to explain what the test does.
-
-- Different tests can have different abstraction levels.
-
-  - Tests for a detailed functionality are more precise.
-  - End-to-end tests can be on very high level.
-  - One test should use only one abstraction level
-
-- Different styles:
-
-  - More technical tests for lower level details and integration tests.
-  - "Executable specifications" act as requirements.
-  - Use domain language.
-  - Everyone (including customer and/or product owner) should always understand.
-
-- No complex logic on the test case level.
-
-  - No for loops or if/else constructs.
-  - Use variable assignments with care.
-  - Test cases should not look like scripts!
-
-- Max 10 steps, preferably less.
-
 - 通常有以下几个阶段：
 
   - 先决条件（可选，通常在前置处理中）
@@ -366,9 +332,7 @@ __ https://github.com/robotframework/RIDE
 - 不同的测试可以有不同的抽象级别。
 
 	- 更详细的功能测试。
-
 	- 端到端测试可以是非常高的级别。
-
 	- 一个测试应该只使用一个抽象级别
 
 
@@ -389,6 +353,7 @@ __ https://github.com/robotframework/RIDE
 	- 小心使用变量赋值
 	- 测试案例不应想脚本那样描述执行细节
 
+- 最多10步，最好少些。 
 
 关键字驱动的测试样例： 
 

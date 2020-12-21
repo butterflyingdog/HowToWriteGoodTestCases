@@ -41,9 +41,9 @@ __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintai
 - 测试集合名称应尽可能具有描述性。
 
 - 可以从文件名或目录名自动创建测试集合名称，注意事项如下：
-  
+
   - 不要包含文件扩展名。
-  - 将下划线转换为空格。 
+  - 将下划线转换为空格。
   - 如果名称都是小写，则单词将大写。
 
 - 名称可以相对较长，但过长的名称不方便文件系统。
@@ -118,7 +118,7 @@ __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintai
   *** Keywords ***
   Input Valid Username And Valid Password And Click Login Button
 
-  
+
 前置（setup）和后置（tearDown）处理阶段的命名
 -------------------------
 
@@ -136,7 +136,7 @@ __ http://blog.codecentric.de/en/2010/07/how-to-structure-a-scalable-and-maintai
 
   - 不要重用，因此最好在只需要一次性前置处理或后置处理的场景中使用。
 
-- 使用这些测试案例的每个人都应该了解前置或后置处理阶段的作用。  
+- 使用这些测试案例的每个人都应该了解前置或后置处理阶段的作用。
 
 
 Good:
@@ -166,8 +166,8 @@ Bad:
 __ http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Run%20Keywords
 
 
- 
- 
+
+
 文档
 =============
 
@@ -191,7 +191,7 @@ __ http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Run%20
 
 - 如果需要记录信息，请考虑使用元数据来表达，元数据可以表示为名称-值对（例如“Version:1.0”或“OS:Linux”）。
 
-- 最顶级的测试集合的文档和元数据可以从分别使用“-doc”和“--metadata”选项的命令行。  
+- 最顶级的测试集合的文档和元数据可以从分别使用“-doc”和“--metadata”选项的命令行。
 
 Good:
 
@@ -212,7 +212,7 @@ Bad (especially if suite is named well like `account_withdrawal.robot`):
   Documentation    Tests Account Withdrawal.
 
 
- 
+
 
 测试用例文档
 -----------------------
@@ -255,7 +255,7 @@ Bad (especially if suite is named well like `account_withdrawal.robot`):
       Title Should Be    Welcome Page
 
 
-	
+
 用户自定义关键字中的文档
 --------------------------
 
@@ -265,7 +265,7 @@ Bad (especially if suite is named well like `account_withdrawal.robot`):
 
 - 关键字文档主要用于记录参数和返回值。
 
-- 关键字文档可以在由 `Libdoc`__ 生成的资源文件和诸如 `RIDE`__ 这样的编辑器工具中显示。 
+- 关键字文档可以在由 `Libdoc`__ 生成的资源文件和诸如 `RIDE`__ 这样的编辑器工具中显示。
 
 __ http://robotframework.org/robotframework/#built-in-tools
 __ https://github.com/robotframework/RIDE
@@ -278,11 +278,11 @@ __ https://github.com/robotframework/RIDE
 
   - 推荐使用公共的前置和/或后置处理步骤。
 
-- 不应该在一个文件中有太多的测试（最多10个），除非它们是 `数据驱动测试`_。
+- 不应该在一个文件中有太多的测试案例（最多10个），除非它们是 `数据驱动测试`_。
 
 - 除了公共的前置和后置处理，其他测试案例原则上应该是彼此独立的。
 
-- 有时测试之间的依赖性是无法避免的。
+- 有时测试案例之间的依赖性是无法避免的。
 
   - 例如，单独初始化所有测试可能需要太多时间。
 
@@ -296,7 +296,7 @@ __ https://github.com/robotframework/RIDE
 
 - 测试案例应该易于理解。
 
-- 一个测试用例应该只测试一件事。
+- 一个测试案例应该只测试一件事。
 
   - 这件事可以是小的（单个功能的一部分）也可以是大的（端到端）。
 
@@ -321,7 +321,6 @@ __ https://github.com/robotframework/RIDE
   - 验证（验证结果，强制）
   - 清理（可选，总是在后置处理中，以确保它被执行）
 
-
 - 关键词描述测试的作用。
 
   - 使用清晰的关键字名称和合适的抽象级别。
@@ -338,9 +337,9 @@ __ https://github.com/robotframework/RIDE
 - 不同风格：
 
   - 对较低层次的细节和集成测试进行更多的技术测试。
-  
+
   - “可执行规范”作为要求。
-  
+
   - 使用领域语言。
 
   - 每个人（包括客户和/或产品负责人）都应该理解。
@@ -352,9 +351,9 @@ __ https://github.com/robotframework/RIDE
   - 小心使用变量赋值
   - 测试案例不应想脚本那样描述执行细节
 
-- 最多10步，最好少些。 
+- 最多10步，最好少些。
 
-关键字驱动的测试样例： 
+关键字驱动的测试样例：
 
 .. code:: robotframework
 
@@ -404,6 +403,24 @@ __ https://github.com/robotframework/RIDE
   on an external model.
 
 Example:
+
+-每个测试案例使用一个高层级的关键字。
+
+  - 不同的参数产生不同的测试。
+  - 一个测试案例可以多次运行同一个关键字来验证多个相关变更。
+
+- 对于用户自定义关键字，则它通常包含类似于 `工作流程测试`_ 部分的工作流描述。
+ - 除非在其他地方需要，否则最好在同一个文件中创建它作为使用它的测试。
+
+- 建议使用*测试模板*功能。
+  - 不需要重复关键字多次。
+  - 更容易在一个测试中测试多个变量。
+
+- 可能并建议命名列标题
+
+- 如果需要大量的测试，可以考虑基于在外部模型上。
+
+例子：
 
 .. code:: robotframework
 

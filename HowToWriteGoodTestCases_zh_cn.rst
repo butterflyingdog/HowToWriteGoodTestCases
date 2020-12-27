@@ -469,24 +469,33 @@ The `web demo project`_ contains an executable version of this example too.
 - 在关键字之间传递信息。
 
 
-Variable naming
+变量命名
 ---------------
 
-- Clear but not too long names.
+- 清楚但不太长的名字。
 
-- Can use comments in variable table to document them more.
 
-- Use case consistently:
+- 可以使用变量表中的注释来记录它们。
 
-  - Lower case with local variables only available inside a certain scope.
-  - Upper case with others (global, suite or test level).
-  - Both space and underscore can be used as a word separator.
 
-- Recommended to also list variables that are set dynamically in the variable
-  table.
+-用例一致：
 
-  - Set typically using BuiltIn keyword `Set Suite Variable`__.
-  - The initial value should explain where/how the real value is set.
+
+-小写，局部变量仅在特定范围内可用。
+
+-与其他人大写（全局、套件或测试级别）。
+
+-空格和下划线都可以用作单词分隔符。
+
+
+-建议还列出在变量中动态设置的变量
+
+表。
+
+
+-通常使用内置关键字“Set Suite Variable”进行设置。
+
+-初始值应说明实际值的设置位置/方式。
 
 Example:
 

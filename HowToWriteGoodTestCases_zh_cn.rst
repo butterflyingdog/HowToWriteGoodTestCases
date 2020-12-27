@@ -380,49 +380,25 @@ __ https://github.com/robotframework/RIDE
 数据驱动测试
 -----------------
 
-- One high-level keyword per test.
-
-  - Different arguments create different tests.
-  - One test can run the same keyword multiple times to validate multiple
-    related variations
-
-- If the keyword is implemented as a user keyword, it typically contains
-  a similar workflow as `workflow tests`_.
-
-  - Unless needed elsewhere, it is a good idea to create it in the same file
-    as tests using it.
-
-- Recommended to use the *test template* functionality.
-
-  - No need to repeat the keyword multiple times.
-  - Easier to test multiple variations in one test.
-
-- Possible, and recommended, to name column headings
-
-- If a really big number of tests is needed, consider generating them based
-  on an external model.
-
-示例:
-
 - 每个测试案例使用一个高层级的关键字。
 
   - 不同的参数产生不同的测试。
   - 一个测试案例可以多次运行同一个关键字来验证多个相关变更。
 
-- 对于用户自定义关键字，则它通常包含类似于 `工作流程测试`_ 部分的工作流描述。
+- 对于用户关键字，则它通常包含类似于 `工作流程测试`_ 部分的工作流描述。
 
-  - 除非在其他地方需要，否则最好在同一个文件中创建它作为使用它的测试。
+  - 除非在其他地方需要，否则最好在案例的同一个文件中创建用户关键字，并在测试案例中使用它。
 
 - 建议使用 *测试模板* 功能。
 
-  - 不需要重复关键字多次。
+  - 不需要多次重复编写关键字。
   - 更容易在一个测试中测试多个变量。
 
-- 可能并建议命名列标题
+- 建议给列标题命名
 
-- 如果需要大量的测试，可以考虑基于在外部模型上。
+- 如果需要大量的测试，建议根据外部模型生成这些案例。
 
-例子：
+示例：
 
 .. code:: robotframework
 

@@ -1,4 +1,4 @@
-.. default-role:: code
+﻿.. default-role:: code
 
 ==================================================
 如何使用Robot Framework编写好的测试案例
@@ -545,10 +545,10 @@ __ http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Set%20
       Should Be Equal     ${status}    SUCCESS
   
 
-避免睡觉
+避免暂停（Sleeping）
 ==============
 
-- 睡眠是一种非常脆弱的同步测试方式。
+- 让案例暂停（Sleeping）是一种非常脆弱的同步测试方式。
 
 - 安全边际会导致平均睡眠时间过长。
 

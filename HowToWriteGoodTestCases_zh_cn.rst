@@ -402,7 +402,7 @@ __ https://github.com/robotframework/RIDE
 - If a really big number of tests is needed, consider generating them based
   on an external model.
 
-Example:
+示例:
 
 -每个测试案例使用一个高层级的关键字。
 
@@ -446,19 +446,19 @@ Example:
 The `web demo project`_ contains an executable version of this example too.
 
 
-User keywords
+用户关键字
+
 =============
 
-- Should be easy to understand.
 
-  - Same rules as with workflow tests.
+- 应该很容易理解。
+  - 与工作流测试相同的规则。
 
-- Different abstraction levels.
+- 不同的抽象层次。
 
-- Can contain some programming logic (for loops, if/else).
-
-  - Especially on lower level keywords.
-  - Complex logic in libraries rather than in user keywords.
+- 可以包含一些编程逻辑（for循环，if/else）。
+ - 尤其是在低级关键字上。
+ - 在库中而不是在用户关键字中的复杂逻辑。
 
 
 Variables

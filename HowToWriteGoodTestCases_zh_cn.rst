@@ -481,14 +481,14 @@ The `web demo project`_ contains an executable version of this example too.
 
 - 用例一致：
 
-  - 小写，局部变量仅在特定范围内可用。
-  - 与其他人大写（全局、套件或测试级别）。
+  - 局部变量小写，并且仅在特定范围内可用。
+  - 全局的、套件的或测试级别的变量大写。
   - 空格和下划线都可以用作单词分隔符。
 
 
 - 建议还列出在变量中动态设置的变量表。
 
-  - 通常使用内置关键字“Set Suite Variable”进行设置。
+  - 通常使用内置关键字 `Set Suite Variable`__ 进行设置。
   - 初始值应说明实际值的设置位置/方式。
 
 示例:

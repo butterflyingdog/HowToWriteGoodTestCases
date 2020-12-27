@@ -462,14 +462,18 @@ The `web demo project`_ contains an executable version of this example too.
  - 在库中而不是在用户关键字中的复杂逻辑。
 
 
-Variables
+变量
+
 =========
 
-- Encapsulate long and/or complicated values.
 
-- Pass information from them command line using the `--variable` option.
+- 封装长的和/或复杂的值。
 
-- Pass information between keywords.
+
+-使用“--variable”选项从命令行传递信息。
+
+
+-在关键字之间传递信息。
 
 
 Variable naming

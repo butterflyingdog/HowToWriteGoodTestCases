@@ -11,4 +11,4 @@
 
 
 
-请参考 `如何使用Robot Framework编写好的测试案例 <HowToWriteGoodTestCases_zh_cn.rst>`_ 文件。
+请参考 `如何使用Robot Framework编写好的测试案例 <HowToWriteGoodTestCases_zh_cn.rst>`_ 。

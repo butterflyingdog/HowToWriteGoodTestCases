@@ -514,9 +514,7 @@ __ http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Set%20
 参数和返回值
 ----------------------------
 
-
 - 常用的方法是从关键字返回值，将它们赋给变量然后将它们作为参数传递给其他关键字。
-
 
   - 清晰易懂的方法。
   - 允许创建独立的关键字并便于重用。
@@ -576,7 +574,7 @@ __ http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Set%20
 
 - 安全边际会导致平均睡眠时间过长。
 
-- 而不是睡觉，使用关键字，民调有一个特定的行动发生。
+- 使用如下的关键字，而不是睡觉，说明等待一个特定的行动发生。
 
   - 关键字名称通常以“Wait…”开头。
   - 应该有最长的等待时间。

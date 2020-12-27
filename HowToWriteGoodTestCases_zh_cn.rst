@@ -451,7 +451,7 @@ The `web demo project`_ contains an executable version of this example too.
 
 
 - 应该很容易理解。
-- 与工作流测试相同的规则。
+ - 与工作流测试相同的规则。
 
 - 不同的抽象层次。
 

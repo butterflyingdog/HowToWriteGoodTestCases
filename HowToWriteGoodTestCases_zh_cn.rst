@@ -463,17 +463,11 @@ The `web demo project`_ contains an executable version of this example too.
 
 
 变量
-
 =========
 
-
 - 封装长的和/或复杂的值。
-
-
--使用“--variable”选项从命令行传递信息。
-
-
--在关键字之间传递信息。
+- 使用“--variable”选项从命令行传递信息。
+- 在关键字之间传递信息。
 
 
 Variable naming

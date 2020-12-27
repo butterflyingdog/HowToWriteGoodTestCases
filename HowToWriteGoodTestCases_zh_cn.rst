@@ -489,7 +489,7 @@ The `web demo project`_ contains an executable version of this example too.
 - 建议还列出在变量中动态设置的变量表。
 
   - 通常使用内置关键字 `Set Suite Variable`__ 进行设置。
-  - 初始值应说明实际值的设置位置/方式。
+  - 通过初始值说明在哪里、以何种方式设置变量实际值。
 
 示例:
 

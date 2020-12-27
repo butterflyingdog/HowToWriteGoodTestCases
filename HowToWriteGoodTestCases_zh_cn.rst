@@ -511,25 +511,27 @@ The `web demo project`_ contains an executable version of this example too.
 __ http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Set%20Suite%20Variable
 
 
-Passing and returning values
+参数和返回值
 ----------------------------
 
-- Common approach is to return values from keywords, assign them to variables
-  and then pass them as arguments to other keywords.
 
-  - Clear and easy to follow approach.
-  - Allows creating independent keywords and facilitates re-use.
-  - Looks like programming and thus not so good on the test case level.
+- 常用的方法是从关键字返回值，将它们赋给变量然后将它们作为参数传递给其他关键字。
 
-- Alternative approach is storing information in a library or using the BuiltIn
-  `Set Test Variable`__ keyword.
 
-  - Avoid programming style on the test case level.
-  - Can be more complex to follow and make reusing keywords harder.
+  - 清晰易懂的方法。
+  - 允许创建独立的关键字并便于重用。
+  - 看起来像是编程，因此在测试用例级别上不是很好。
+
+
+- 另一种方法是在库中存储信息或使用内置的`Set Test Variable`__ 关键字。
+
+  - 避免测试用例级别的编程风格。
+  - 可能更复杂的遵循和重用关键字更难。
 
 __ http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Set%20Test%20Variable
 
-Good:
+
+恰当的示例:
 
 .. code:: robotframework
 
@@ -547,7 +549,7 @@ Good:
   Withdraw Should Have Succeeded
       Should Be Equal    ${STATUS}   SUCCESS
 
-Not so good:
+使用不当的示例:
 
 .. code:: robotframework
 
@@ -589,6 +591,31 @@ Avoid sleeping
 - Can be useful in debugging to stop execution.
 
   - `Dialogs library`__ often works better.
+  
+
+避免睡觉
+==============
+
+- 睡眠是一种非常脆弱的同步测试方式。
+
+- 安全边际会导致平均睡眠时间过长。
+
+- 而不是睡觉，使用关键字，民调有一个特定的行动发生。
+
+  - 关键字名称通常以“Wait…”开头。
+  - 应该有最长的等待时间。
+  - 可以在内置关键字 `Wait Until Keyword Succeeds`__ 中包装其他关键字。
+
+
+- 有时候睡觉是最简单的解决办法。
+
+  - 小心使用。
+  - 不要在经常被测试或其他关键字使用的用户关键字中使用。
+
+
+-可用于调试停止执行。
+
+  - 使用 `Dialogs library`__  通常效果更好。  
 
 __ http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Wait%20Until%20Keyword%20Succeeds
 __ http://robotframework.org/robotframework/latest/libraries/Dialogs.html

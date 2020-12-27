@@ -523,7 +523,7 @@ __ http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Set%20
   - 看起来像是编程，因此在测试用例级别上不是很好。
 
 
-- 另一种方法是在库中存储信息或使用内置的`Set Test Variable`__ 关键字。
+- 另一种方法是在库中存储信息或使用内置的 `Set Test Variable`__ 关键字。
 
   - 避免测试用例级别的编程风格。
   - 可能更复杂的遵循和重用关键字更难。
@@ -567,30 +567,6 @@ __ http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Set%20
   Withdraw Should Have Succeeded
       [Arguments]    ${status}
       Should Be Equal     ${status}    SUCCESS
-
-
-Avoid sleeping
-==============
-
-- Sleeping is a very fragile way to synchronize tests.
-
-- Safety margins cause too long sleeps on average.
-
-- Instead of sleeps, use keyword that polls has a certain action occurred.
-
-  - Keyword names often starts with `Wait ...`.
-  - Should have a maximum time to wait.
-  - Possible to wrap other keywords inside the BuiltIn keyword
-    `Wait Until Keyword Succeeds`__.
-
-- Sometimes sleeping is the easiest solution.
-
-  - Always use with care.
-  - Never use in user keywords that are used often by tests or other keywords.
-
-- Can be useful in debugging to stop execution.
-
-  - `Dialogs library`__ often works better.
   
 
 避免睡觉

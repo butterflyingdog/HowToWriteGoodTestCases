@@ -439,7 +439,7 @@ The `web demo project`_ contains an executable version of this example too.
 - 可以包含一些编程逻辑（for循环，if/else）。
 
   - 尤其是在低级关键字上。
-  - 在库中而不是在用户关键字中的复杂逻辑。
+  - 在库中而不是在用户关键字中实现复杂逻辑。
 
 
 变量
@@ -496,13 +496,13 @@ __ http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Set%20
 
   - 清晰易懂的方法。
   - 允许创建独立的关键字并便于重用。
-  - 看起来像是编程，因此在测试用例级别上不是很好。
+  - 因为参数和返回值看起来像是编程，因此不推荐测试用例中使用。
 
 
 - 另一种方法是在库中存储信息或使用内置的 `Set Test Variable`__ 关键字。
 
-  - 避免测试用例级别的编程风格。
-  - 可能更复杂的遵循和重用关键字更难。
+  - 避免测试用例这个级别中使用编程风格的写法。
+  - 可能会使重用关键字更难。
 
 __ http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Set%20Test%20Variable
 

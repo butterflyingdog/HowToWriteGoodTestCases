@@ -451,8 +451,7 @@ The `web demo project`_ contains an executable version of this example too.
 
 
 - 应该很容易理解。
-  
-  - 与工作流测试相同的规则。
+- 与工作流测试相同的规则。
 
 - 不同的抽象层次。
 
@@ -465,7 +464,7 @@ The `web demo project`_ contains an executable version of this example too.
 变量
 =========
 
-- 封装长的和/或复杂的值。
+- 封装长的 和/或 复杂的值。
 - 使用“--variable”选项从命令行传递信息。
 - 在关键字之间传递信息。
 

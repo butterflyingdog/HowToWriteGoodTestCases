@@ -453,7 +453,9 @@ The `web demo project`_ contains an executable version of this example too.
 - 应该很容易理解。
   - 与工作流测试相同的规则。
 
+
 - 不同的抽象层次。
+
 
 - 可以包含一些编程逻辑（for循环，if/else）。
   - 尤其是在低级关键字上。
@@ -474,14 +476,14 @@ The `web demo project`_ contains an executable version of this example too.
 - 清楚但不太长的名字。
 - 可以使用变量表中的注释来记录它们。
 - 用例一致：
- - 小写，局部变量仅在特定范围内可用。
- - 与其他人大写（全局、套件或测试级别）。
- - 空格和下划线都可以用作单词分隔符。
+  - 小写，局部变量仅在特定范围内可用。
+  - 与其他人大写（全局、套件或测试级别）。
+  - 空格和下划线都可以用作单词分隔符。
 
 
 - 建议还列出在变量中动态设置的变量表。
- - 通常使用内置关键字“Set Suite Variable”进行设置。
- - 初始值应说明实际值的设置位置/方式。
+  - 通常使用内置关键字“Set Suite Variable”进行设置。
+  - 初始值应说明实际值的设置位置/方式。
 
 Example:
 
